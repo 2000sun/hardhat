@@ -2,7 +2,6 @@
 import { React, useEffect, useState } from "react";
 import { ethers, providers } from "ethers";
 import abi from "@/app/ABI/user.json";
-import User from "./component/User";
 import LoginButton from "./component/LoginButton";
 import LogoutButton from "./LogoutButton";
 

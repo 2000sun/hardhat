@@ -1,7 +1,6 @@
-import React from "react";
 import Register from "./component/Register";
 import { connectDB } from "@/util/database";
-import Link from "next/link";
+// import MetaMask from "./MetaMask";
 
 export const dynamic = "force-dynamic";
 
@@ -13,6 +12,7 @@ const page = async () => {
   return (
     <div className="list-bg">
       <Register result={result} />
+      {/* <MetaMask /> */}
     </div>
   );
 };

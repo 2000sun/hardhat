@@ -1,10 +1,11 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import LoginButton from "./LoginButton";
+import LoginButton from "./component/LoginButton";
 import LogoutButton from "./LogoutButton";
 import { getServerSession } from "next-auth";
 import { AuthOptions } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
+import MetaMask from "./MetaMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +20,14 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        {session ? (
+        {/* {session ? (
           <span>
             {session.user.name} <LogoutButton />{" "}
           </span>
         ) : (
           <LoginButton></LoginButton>
-        )}
+        )} */}
+        <MetaMask session={session}></MetaMask>
 
         {children}
       </body>

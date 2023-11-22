@@ -7,7 +7,6 @@ import { AuthOptions } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import MetaMask from "./MetaMask";
 import { connectDB } from "@/util/database";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

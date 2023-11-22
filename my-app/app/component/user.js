@@ -14,7 +14,7 @@ const User = ({ state }) => {
   }, [contract]);
 
   return (
-    <div>
+    <div className="user-info">
       {users.map((user, i) => (
         <div key={i}>
           <h3>{user.name}</h3>

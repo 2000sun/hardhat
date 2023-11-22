@@ -15,19 +15,23 @@ const LoginButton = ({ state, result }) => {
     await transaction.wait();
     console.log("트잭후 이름", name);
     console.log("트잭후 이메일", email);
-    signIn();
+    signIn({ callbackUrl: "/write" });
+
     alert("송금완료! 이제 로그인이 가능합니다.");
   };
   return (
     <>
-      <button
-        onClick={() => {
-          alert("로그인 시도중!");
-          user();
-        }}
-      >
-        로그인
-      </button>
+      <div className="login-btn-container">
+        <button
+          className="login-btn"
+          onClick={() => {
+            alert("로그인 시도중!");
+            user();
+          }}
+        >
+          로그인
+        </button>
+      </div>
     </>
   );
 };

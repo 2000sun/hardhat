@@ -56,14 +56,17 @@ const MetaMask = ({ session, result }) => {
       <p> 연결된 계좌 : {account} </p>
 
       {session ? (
-        <span>
-          {session.user.name} <LogoutButton />
-        </span>
+        <div className="login-info">
+          <img className="user-img" src="/user.png" width={20} height={20} />
+          <div>{session.user.name}</div>
+          <div className="write">글 작성하기</div>
+          <div className="write">글 목록보기</div>
+          <div className="write">회원 정보 보기</div>
+          <LogoutButton />
+        </div>
       ) : (
         <LoginButton state={state} result={result}></LoginButton>
       )}
-
-      <User state={state}></User>
     </div>
   );
 };

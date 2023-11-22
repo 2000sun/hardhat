@@ -1,6 +1,11 @@
 import React from "react";
+// import { getServerSession } from "next-auth";
+// import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
-const Write = () => {
+const Write = async () => {
+  // let session = await getServerSession(authOptions);
+  // console.log("session??", session);
+
   return (
     <div className="p-20">
       <form action="/api/post/new" method="POST">

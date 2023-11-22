@@ -1,4 +1,117 @@
+body {
+  background-color: #eee;
+}
 
+.user-img {
+  margin-right: -3px;
+  margin-bottom: -3px;
+}
+
+.write {
+  font-weight: bold;
+}
+
+.login-info {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+
+}
+
+
+
+
+.register {
+  background-color: white;
+  width: 70vh;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  margin-top: -30px;
+}
+
+
+
+
+.login-btn {
+ 
+}
+
+
+.form {
+  width: 50vh;
+}
+
+.input-box input {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.line {
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  margin-top: 10px;
+  width: 200px;
+  height: 1px;
+  background-color:  lightgray;
+  margin-right: 13px;
+
+}
+
+.right {
+  margin-left: 13px;
+  margin-top: 10px;
+  width: 200px;
+  height: 1px;
+  background-color:  lightgray;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn button {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+
+.register p {
+  margin-bottom: 3px;
+
+}
+
+.register h2 {
+  text-align: center;
+}
+
+
+.register-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.main-name {
+  margin-top: 50px;
+  text-align: center;
+  color: #1853DB
+}
 
 .list-bg {
   background: rgb(249, 250, 255);

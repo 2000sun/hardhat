@@ -1,24 +1,22 @@
+"use client";
 import { signIn } from "next-auth/react";
-import { React } from "react";
-import { ethers, providers } from "ethers";
+import { React, useState } from "react";
+import { ethers } from "ethers";
 
-const LoginButton = ({ state }) => {
+const LoginButton = ({ state, result }) => {
   const user = async () => {
     const { contract } = state;
-    console.log("contract??", contract);
-    const name = "김태양";
-    const message = "23";
-    const amount = { value: ethers.utils.parseEther("0.01") };
-    console.log(amount);
-    const transaction = await contract.registerUser(name, message, amount);
+    const name = result[result.length - 1].name;
+    const email = result[result.length - 1].email;
+    const amount = { value: ethers.utils.parseEther("0.001") };
+    console.log("트잭전 이름", result[result.length - 1].name);
+    console.log("트잭전 이메일", result[result.length - 1].email);
+    const transaction = await contract.registerUser(name, email, amount);
     await transaction.wait();
-    console.log("name : ", name);
-    console.log("message : ", message);
-    console.log("트랜잭션 성공!!!");
-    // alert("트랜잭션 성공임!!!");
+    console.log("트잭후 이름", name);
+    console.log("트잭후 이메일", email);
     signIn();
-
-    // window.location.reload();
+    alert("송금완료! 이제 로그인이 가능합니다.");
   };
   return (
     <>

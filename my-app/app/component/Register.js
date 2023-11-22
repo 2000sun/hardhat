@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import { React } from "react";
+import User from "./User";
 
 export default function Register({ result }) {
   const user = () => {};
@@ -18,17 +19,7 @@ export default function Register({ result }) {
           회원가입
         </button>
       </form>
-
-      {/* <div>
-        {result.map((a, i) => {
-          return (
-            <div key={i}>
-              <h3>{result[i].name}</h3>
-              <h4>{result[i].email}</h4>
-            </div>
-          );
-        })}
-      </div> */}
+      <User></User>
     </div>
   );
 }

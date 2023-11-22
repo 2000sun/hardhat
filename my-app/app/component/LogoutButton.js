@@ -7,10 +7,10 @@ const LogoutButton = () => {
     <>
       <button
         onClick={() => {
-          signOut();
+          signOut({ callbackUrl: "/" });
         }}
       >
-        로그아웃
+        로아웃
       </button>
     </>
   );

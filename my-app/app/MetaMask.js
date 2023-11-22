@@ -3,9 +3,10 @@ import { React, useEffect, useState } from "react";
 import { ethers, providers } from "ethers";
 import abi from "@/app/ABI/user.json";
 import LoginButton from "./component/LoginButton";
-import LogoutButton from "./LogoutButton";
+import LogoutButton from "./component/LogoutButton";
+import User from "./component/User";
 
-const MetaMask = ({ session }) => {
+const MetaMask = ({ session, result }) => {
   console.log("session???", session);
 
   const [state, setState] = useState({
@@ -18,7 +19,7 @@ const MetaMask = ({ session }) => {
 
   useEffect(() => {
     const template = async () => {
-      const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+      const contractAddress = "0x44C4dF90b42DEfC51b73d8F2104393D0d5B499cC";
       const contractABI = abi.abi;
 
       try {
@@ -53,13 +54,16 @@ const MetaMask = ({ session }) => {
   return (
     <div>
       <p> 연결된 계좌 : {account} </p>
+
       {session ? (
         <span>
           {session.user.name} <LogoutButton />
         </span>
       ) : (
-        <LoginButton state={state}></LoginButton>
+        <LoginButton state={state} result={result}></LoginButton>
       )}
+
+      <User state={state}></User>
     </div>
   );
 };

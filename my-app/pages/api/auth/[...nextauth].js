@@ -51,6 +51,12 @@ export const authOptions = {
   },
 
   callbacks: {
+    async redirect({ url, baseUrl }) {
+      if (url.startsWith("/")) return `${baseUrl}${url}`;
+      else if (new URL(url).origin === baseUrl) return url;
+      return baseUrl;
+    },
+
     //4. jwt 만들 때 실행되는 코드
     //user변수는 DB의 유저정보담겨있고 token.user에 뭐 저장하면 jwt에 들어갑니다.
     jwt: async ({ token, user }) => {

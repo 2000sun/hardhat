@@ -61,7 +61,7 @@ const MetaMask = ({ session, result }) => {
           <div>{session.user.name}</div>
           <div className="write">글 작성하기</div>
           <div className="write">글 목록보기</div>
-          <div className="write">회원 정보 보기</div>
+          <div className="write">회원 정보 보기입니다! </div>
           <LogoutButton />
         </div>
       ) : (

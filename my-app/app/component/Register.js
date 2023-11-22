@@ -1,26 +1,27 @@
 "use client";
 import { React } from "react";
-import User from "./User";
 import LoginButton from "./LoginButton";
+import { Button, Input } from "antd";
 
 export default function Register({ result }) {
-  const user = () => {};
   return (
     <div className="register-container">
       <div className="register">
+        {/* 전송 버튼을 누르면 signup 서버에 유저가 입력한 데이터 전송 */}
         <form className="form" method="POST" action="/api/auth/signup">
           <h2>회원가입</h2>
           <div className="input-box">
             <p>이름</p>
-            <input name="name" type="text" />
+            <Input name="name" type="text" />
             <p>이메일</p>
-            <input name="email" type="text" />
+            <Input name="email" type="text" />
             <p>비밀번호</p>
-            <input name="password" type="password" />
+            <Input name="password" type="password" />
           </div>
 
           <div className="btn">
             <button
+              className="register-btn"
               onClick={() => {
                 alert("회원가입 성공! 로그인 해주세요.");
               }}
@@ -30,13 +31,7 @@ export default function Register({ result }) {
             </button>
           </div>
           <div></div>
-          {/* <div className="line">
-            <div className="left"></div>
-            <div>or</div>
-            <div className="right"></div>
-          </div> */}
         </form>
-        <User></User>
       </div>
     </div>
   );

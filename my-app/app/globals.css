@@ -2,9 +2,47 @@ body {
   background-color: #eee;
 }
 
+@font-face {
+  font-family: 'JeonjuCraftMjB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/JeonjuCraftMjB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.user-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.list-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.space {
+  margin-left: 5px;
+}
+
+.user-name {
+  font-weight: bold;
+  margin-left: -10px;
+}
+
+
+
 .user-img {
   margin-right: -3px;
   margin-bottom: -3px;
+}
+
+.user-img-1 {
+  margin-right: 7px;
+
 }
 
 .write {
@@ -18,6 +56,11 @@ body {
 
 }
 
+
+.hardhat-img {
+  margin-right: 15px;
+  margin-bottom: -4px;
+}
 
 
 
@@ -35,14 +78,9 @@ body {
 
 
 
-
-.login-btn {
- 
-}
-
-
 .form {
   width: 50vh;
+  
 }
 
 .input-box input {
@@ -50,6 +88,10 @@ body {
 }
 
 
+.register {
+  border: 1px solid lightgray;
+  border-radius: 3%;
+}
 
 
 
@@ -105,26 +147,110 @@ body {
   justify-content: center;
 }
 
+.write-btn {
+  margin-top: 30px;
+  cursor: pointer;
+  background-color: white;
+  width: 100px;
+}
+
+.register-btn {
+  border: 1px solid lightgray; 
+  background-color: white;
+}
+
+.register-btn:hover {
+  border: 1px solid #3F96FE; 
+  cursor: pointer;
+  color: #4097FE;
+}
+
+
+.delete-btn {
+  margin-left: 10px;
+  font-size: 14px;
+  padding: 6px 23px;
+  background: white;
+  border: 1px solid lightgray; 
+  border-radius: 5px;
+}
+
+.delete-btn:hover{
+  border: 1px solid #3F96FE; 
+  cursor: pointer;
+  color: #4097FE;
+ 
+}
+
+.write-btn:hover {
+  border: 1px solid lightblue; 
+  color: lightblue; 
+}
+
+
+.write-textarea {
+  width: 93%;
+}
+
+.write-input {
+  width: 30%;
+  height: 50px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+
+.edit-btn {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 80%;
+}
+
+
+
+
+.connect-account {
+  font-family: 'JeonjuCraftMjB';
+}
+
 
 
 .main-name {
+  font-family: 'JeonjuCraftMjB';
   margin-top: 50px;
   text-align: center;
   color: #1853DB
 }
 
 .list-bg {
-  background: rgb(249, 250, 255);
   padding: 10px;
+  width: 60%;
+}
+
+.pair {
+  display: flex;
+  background-color: black;
+}
+
+.list-bg-1 {
+  padding: 10px;
+  width: 80%;
 }
 .list-item {
+  white-space: nowrap;
   background: white;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 5px;
   box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px;
   opacity: 1;
+  
 }
+
+
+
 .list-item h4 {
   font-size: 20px;
   font-weight: 800;
@@ -151,6 +277,30 @@ button {
   border: none;
   border-radius: 5px;
 } 
+
+.logout-btn {
+  padding: 5px 7px;
+  margin-top: -3px;
+  margin-left: -12px;
+  background-color: #eee;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.login-btn {
+  border: 1px solid lightgray; 
+  background-color: white;
+}
+
+.login-btn:hover {
+  border: 1px solid #3F96FE; 
+  cursor: pointer;
+  color: #4097FE;
+}
+
+.logout-btn:hover {
+  color: red;
+}
 
 
 a {

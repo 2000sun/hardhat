@@ -21,7 +21,7 @@ const MetaMask = ({ session, result }) => {
 
   useEffect(() => {
     const template = async () => {
-      const contractAddress = "0xCeff7e47A006dfe685EbF4614434E37b04d3AcEB";
+      const contractAddress = "0x2b88afcd2350C9BD1580942407ABf6eb8fA04a2C";
       const contractABI = abi.abi;
 
       try {

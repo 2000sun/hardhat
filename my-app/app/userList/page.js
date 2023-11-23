@@ -7,7 +7,7 @@ const UserList = () => {
   const [users, setUsers] = useState([]);
 
   // 컨트랙트의 함수를 사용해야하기때문에 초기 셋팅
-  const contractAddress = "0xCB42A2911EE81e14502b21a2ee796bFeE3C5AAb1";
+  const contractAddress = "0xCeff7e47A006dfe685EbF4614434E37b04d3AcEB";
   const contractABI = abi.abi;
   const provider = new ethers.providers.Web3Provider(ethereum);
   const signer = provider.getSigner();
